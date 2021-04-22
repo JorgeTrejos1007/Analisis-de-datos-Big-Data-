@@ -1,6 +1,6 @@
 ### **Jorge Mario Trejos Barquero**
 ### **B77676**
-### **Práctica**
+### **Práctica 1**
 
 #### Laboratorio 2
 De esta sección aprendí como usar la librería de pandas para graficar, ya previamente había visto pandas pero no había profundizado mucho en aprenderlo, de todas maneras los tipos de gráficas que se pueden conseguir son muy útiles y fáciles de realizar. Además, aprendí que es y como se usa una lista de comprensión que es algo que nunca había visto ni usado en python. Después de esto todo lo demás ya lo conocía puesto que ya había usado python en varias ocasiones y conocía más o menos la lógica detrás de realizar un análisis exploratorio de datos.
