@@ -1,0 +1,352 @@
+[
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Keywords",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Logging; Canada; Camp; Mules"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Logging; Canada; Camp; Mules; Donkey"
+      }
+    ],
+    "description": "Mass edit cells in column Keywords"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Format Digital",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "jpg"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "image/jpg"
+      }
+    ],
+    "description": "Mass edit cells in column Format Digital"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Format Digital",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "image/jpg"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "image/jpeg"
+      }
+    ],
+    "description": "Mass edit cells in column Format Digital"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Language",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "English"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Eng"
+      }
+    ],
+    "description": "Mass edit cells in column Language"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Language",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Eng"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "eng"
+      }
+    ],
+    "description": "Mass edit cells in column Language"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Language",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "en"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "eng"
+      }
+    ],
+    "description": "Mass edit cells in column Language"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Title",
+    "expression": "grel:value + \" in Idaho\"",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Title using expression grel:value + \" in Idaho\""
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Title",
+    "expression": "grel:value.replace(\"Big\", \"Cat\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Title using expression grel:value.replace(\"Big\", \"Cat\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "Date",
+          "columnName": "Date",
+          "query": "{",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": true
+        },
+        {
+          "type": "text",
+          "name": "Date",
+          "columnName": "Date",
+          "query": "-",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Date",
+    "expression": "grel:value.toDate().toString(\"MM/dd/yyyy\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Date using expression grel:value.toDate().toString(\"MM/dd/yyyy\")"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Title",
+    "expression": "grel:value.length()",
+    "onError": "set-to-blank",
+    "newColumnName": "tittle_length",
+    "columnInsertIndex": 1,
+    "description": "Create column tittle_length at index 1 based on column Title using expression grel:value.length()"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Format Digital",
+    "expression": "grel:value",
+    "onError": "set-to-blank",
+    "newColumnName": "format2",
+    "columnInsertIndex": 20,
+    "description": "Create column format2 at index 20 based on column Format Digital using expression grel:value"
+  },
+  {
+    "op": "core/column-split",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "format2",
+    "guessCellType": true,
+    "removeOriginalColumn": true,
+    "mode": "separator",
+    "separator": "/",
+    "regex": false,
+    "maxColumns": 2,
+    "description": "Split column format2 by separator"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "CONTENTdm number",
+    "expression": "grel:\"https://digital.lib.uidaho.edu/digital/iiif/phs/\" + value + \"/info.json\"",
+    "onError": "set-to-blank",
+    "newColumnName": "iiif-api",
+    "columnInsertIndex": 25,
+    "description": "Create column iiif-api at index 25 based on column CONTENTdm number using expression grel:\"https://digital.lib.uidaho.edu/digital/iiif/phs/\" + value + \"/info.json\""
+  },
+  {
+    "op": "core/column-addition-by-fetching-urls",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Format Digital",
+          "expression": "value",
+          "columnName": "Format Digital",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "image/jpeg",
+                "l": "image/jpeg"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "text",
+          "name": "Title",
+          "columnName": "Title",
+          "query": "dog",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "baseColumnName": "iiif-api",
+    "urlExpression": "grel:value",
+    "onError": "set-to-blank",
+    "newColumnName": "iiif-info",
+    "columnInsertIndex": 26,
+    "delay": 0,
+    "cacheResponses": true,
+    "httpHeadersJson": [
+      {
+        "name": "authorization",
+        "value": ""
+      },
+      {
+        "name": "user-agent",
+        "value": "OpenRefine 3.4.1 [437dc4d]"
+      },
+      {
+        "name": "accept",
+        "value": "*/*"
+      }
+    ],
+    "description": "Create column iiif-info at index 26 by fetching URLs based on column iiif-api using expression grel:value"
+  },
+  {
+    "op": "core/column-reorder",
+    "columnNames": [
+      "Title",
+      "tittle_length",
+      "Description",
+      "Creator",
+      "Date",
+      "Keywords",
+      "Coverage",
+      "Donor",
+      "Latitude",
+      "Longitude",
+      "Relation",
+      "Publisher",
+      "Source",
+      "Identifier",
+      "Rights",
+      "Rights (Standardized)",
+      "Format Original",
+      "Type",
+      "Format Digital",
+      "format2 1",
+      "format2 2",
+      "Language",
+      "Reference URL",
+      "CONTENTdm number",
+      "iiif-api",
+      "iiif-info"
+    ],
+    "description": "Reorder columns"
+  },
+  {
+    "op": "core/row-flag",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "Title",
+          "columnName": "Title",
+          "query": "$",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        },
+        {
+          "type": "text",
+          "name": "Description",
+          "columnName": "Description",
+          "query": "$",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "flagged": true,
+    "description": "Flag rows"
+  }
+]
