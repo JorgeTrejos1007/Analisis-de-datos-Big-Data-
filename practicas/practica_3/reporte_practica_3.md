@@ -1,0 +1,11 @@
+### **Jorge Mario Trejos Barquero**
+### **B77676**
+### **Práctica 2**
+
+#### Tutorial 1
+De este primer tutorial se aprendió a como entrenar un dataset aplicando múltiples métodos ya existentes en las librerías de python para poder obtener un mejor porcentaje de precisión a la hora de tratar de explicar los datos que estamos estudiando. En el ejemplo se ve como inicialmente se creaba un modelo lineal y se usaba el método "RepeatedStratifiedKFold" (este método no me quedó del todo claro como funciona por dentro) y con esto obteníamos una precisión del 95%. Luego se agregaron una cuantas funciones de transformaciones y se uso "FeatureUnion" para juntar todas estas transformaciones y con esto subir a 96% la precisión. Finalmente, se le agregó que hiciera un Recursive Feature Elimination para poder obtener solo las 15 columnas más significativas y con esto se llegó a un 98% casi 99% de precisión, esto gracias a que estamos quitando columnas menos significativas que podrían estar introduciendo ruido a nuestro modelo.
+En este momento nos podemos hacer la pregunta de que pasaría si cambiamos el valor de dejar solo las 15 columnas más significativas. ¿Que pasaría si usamos más? ¿Y si usamos menos reducimos más aún el ruido? Estos experimentos fueron realizados y se percibe que si se aumenta la cantidad de columnas a dejar entonces se empieza a introducir ruido y la precisión baja, de igual manera si se reduce la cantidad de columnas también baja la precisión pero ahora es porque hay insuficientes datos entonces no se puede explicar bien que esta pasando, es decir, faltan variables.
+
+#### Tutorial 2
+En esta lectura podemos leer sobre diferentes metodos para hacer Feature Selection que es reducir la cantidad de atributos o columnas del dataset para reducir el costo computacional que tendría realizarle un estudio al dataset completo y para quitar variables que no aportan nada al estudio o que aportan muy poco.
+Se mencionan algunos metodos para hacer Feature Selection dependiendo de los casos que tengamos como input (variables) y output (variable a estudiar) las cuales pueden ser categoricas y numericas, dependiendo del caso se podrían usar metodos de Wrapper (como el RFE) o de Filter (como chi cuadrado, Pearson's, ANOVA, etc).
