@@ -9,13 +9,13 @@ En esta parte del curso se habló de la definición de algunos términos que est
 
 ##### 2) Sistematización del proceso de minería de datos
 Se habló del proceso que se sigue normalmente para la minería de datos, este es:
-1) Limpieza de los datos. 
-2) Integración de diferentes fuentes de datos. 
-3) Selección de datos representativos. 
-4) Transformación. 
-5) Proceso de minería con estrategias. 
-6) Evaluación 
-7) Presentación de los datos. 
+1. Limpieza de los datos. 
+2. Integración de diferentes fuentes de datos. 
+3. Selección de datos representativos. 
+4. Transformación. 
+5. Proceso de minería con estrategias. 
+6. Evaluación 
+7. Presentación de los datos. 
 
 Luego se mencionaron algunos de los retos que tiene este proceso, tales como: escalabilidad, dimensionalidad, heterogeneidad de los datos, inconsistencia de los datos, temporalidad, etc.
 
@@ -23,7 +23,7 @@ Luego se mencionaron algunos de los retos que tiene este proceso, tales como: es
 De donde y como obtengo los datos que se van a analizar. Dentro de este aspecto hay que mencionar que los datos tienen que ser confiables, tratados con cuidado y que se deben de trabajar antes de realizar cualquier análisis. Trabajar los datos significa reducir o eliminar el ruido que pueda haber en ellos, el ruido puede ser corregible (artifacts) o no corregible. Para corregir un poco de ruido hay múltiples técnicas, una de ellas de las que se vieron en clase es la técnica del vecino más cercano, donde para un valor faltante se le pone el del vecino más cercano. Existen valores de tipo numéricos y categóricos, además de valores atípicos los cuales pueden sesgar nuestros resultados
 
 ##### 4) Exploración de los datos
-Finalmente, se habló de la exploración de los datos, este es un proceso de análisis donde se somete el dataset ya limpiado a varios test para poder aceptar o rechazar las hipótesis realizadas. Es importante no torturar el dataset, esto significa no someterlo a muchas hipótesis y test ya que se puede perderse el objetivo principal del análisis y puede dar paso a problemas como correlaciones falses donde dos variables sin relación alguna parecen tener alguna clase de interacción. Para iniciar este proceso hay que conocer muy bien el dataset y 5 valores muy importantes a conocer para cada variable los cuales nos pueden dar mucha información son: mínimo, primer cuartil, mediana, tercer cuartil y máximo.
+Finalmente, se habló de la exploración de los datos, este es un proceso de análisis donde se somete el dataset ya limpiado a varios test para poder aceptar o rechazar las hipótesis realizadas. Es importante no torturar el dataset, esto significa no someterlo a muchas hipótesis y test ya que se puede perderse el objetivo principal del análisis y puede dar paso a problemas como correlaciones falsas donde dos variables sin relación alguna parecen tener alguna clase de interacción. Para iniciar este proceso hay que conocer muy bien el dataset y 5 valores muy importantes a conocer para cada variable los cuales nos pueden dar mucha información son: mínimo, primer cuartil, mediana, tercer cuartil y máximo.
 
 #### **Aprendido**
 Sobre todo lo aprendido gira más entorno a las definiciones que tienen que ver con big data como tal ya que, toda la parte de colecta de datos y análisis exploratorio ya son temas que se vieron en el curso de diseño de experimentos para los estudiantes que pertenecieran al énfasis de TI o CC.
