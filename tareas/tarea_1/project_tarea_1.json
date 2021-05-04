@@ -1,0 +1,222 @@
+[
+  {
+    "op": "core/column-removal",
+    "columnName": "Dystopia + residual",
+    "description": "Remove column Dystopia + residual"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Explained by: Perceptions of corruption",
+    "description": "Remove column Explained by: Perceptions of corruption"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Explained by: Generosity",
+    "description": "Remove column Explained by: Generosity"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Explained by: Freedom to make life choices",
+    "description": "Remove column Explained by: Freedom to make life choices"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Explained by: Healthy life expectancy",
+    "description": "Remove column Explained by: Healthy life expectancy"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Explained by: Social support",
+    "description": "Remove column Explained by: Social support"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Explained by: Log GDP per capita",
+    "description": "Remove column Explained by: Log GDP per capita"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Ladder score in Dystopia",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Ladder score in Dystopia using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Perceptions of corruption",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Perceptions of corruption using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Generosity",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Generosity using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Freedom to make life choices",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Freedom to make life choices using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Healthy life expectancy",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Healthy life expectancy using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Social support",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Social support using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Logged GDP per capita",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Logged GDP per capita using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "lowerwhisker",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column lowerwhisker using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "upperwhisker",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column upperwhisker using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Standard error of ladder score",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Standard error of ladder score using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Ladder score",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Ladder score using expression value.toNumber()"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Ladder score",
+    "newColumnName": "happiness ratio",
+    "description": "Rename column Ladder score to happiness ratio"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "happiness ratio",
+    "newColumnName": "Happiness ratio",
+    "description": "Rename column happiness ratio to Happiness ratio"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Standard error of ladder score",
+    "newColumnName": "Standard error of happiness ratio",
+    "description": "Rename column Standard error of ladder score to Standard error of happiness ratio"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Happiness ratio",
+    "newColumnName": "Happiness scale",
+    "description": "Rename column Happiness ratio to Happiness scale"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Standard error of happiness ratio",
+    "newColumnName": "Standard error of happiness scale",
+    "description": "Rename column Standard error of happiness ratio to Standard error of happiness scale"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Logged GDP per capita",
+    "newColumnName": "Logged PBI per capita",
+    "description": "Rename column Logged GDP per capita to Logged PBI per capita"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Ladder score in Dystopia",
+    "newColumnName": "Score in Dystopia",
+    "description": "Rename column Ladder score in Dystopia to Score in Dystopia"
+  }
+]
